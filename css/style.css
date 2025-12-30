@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #fdfbfb;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ===== FULL SCREEN SCENES ===== */
+.scene {
+    height: 100vh;
+    padding: 60px 20px;
+    max-width: 720px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.scene.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== INTRO ===== */
+.intro h1 {
+    font-size: 2.4em;
+    text-align: center;
+}
+
+.intro p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.hint {
+    margin-top: 40px;
+    opacity: 0.6;
+}
+
+/* ===== YEARS ===== */
+.year h2 {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.year p {
+    line-height: 1.8;
+}
+
+.year img {
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 12px;
+}
+
+/* ===== FINAL ===== */
+.final {
+    text-align: center;
+}
+
+.quote {
+    font-size: 1.4em;
+    font-style: italic;
+}
+
+.heart {
+    margin-top: 20px;
+    font-size: 2em;
+    color: crimson;
+}
+
+.footer {
+    margin-top: 20px;
+    color: #777;
+}

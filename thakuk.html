@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Four Years of Togetherness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Georgia', serif;
+        background: linear-gradient(120deg, #fdfbfb, #ebedee);
+        color: #333;
+    }
+
+    .container {
+        max-width: 720px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.2em;
+    }
+
+    h2 {
+        margin-top: 40px;
+        font-size: 1.4em;
+        color: #555;
+    }
+
+    p {
+        line-height: 1.8;
+        font-size: 1.05em;
+    }
+
+    /* ===== SCROLL-BASED YEAR ANIMATION ===== */
+    .year {
+        margin-top: 80px;
+        padding-left: 15px;
+        border-left: 3px solid #ccc;
+
+        opacity: 0;
+        transform: translateY(70px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .year.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* ===== IMAGE EFFECT ===== */
+    img {
+        width: 100%;
+        margin-top: 15px;
+        border-radius: 10px;
+        transition: transform 0.6s ease, box-shadow 0.6s ease;
+    }
+
+    img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    }
+
+    /* ===== QUOTE SECTION ===== */
+    .quote {
+        margin-top: 70px;
+        padding: 25px;
+        background: rgba(255,255,255,0.7);
+        border-radius: 8px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .footer {
+        margin-top: 70px;
+        text-align: center;
+        color: #777;
+    }
+
+    .heart {
+        color: crimson;
+        font-size: 1.2em;
+    }
+</style>
+      
+</head>
+<script>
+    const years = document.querySelectorAll('.year');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    }, {
+        threshold: 0.6
+    });
+
+    years.forEach(year => {
+        observer.observe(year);
+    });
+</script>
+
+<body>
+
+<div class="container">
+
+    <h1>Four Years of Togetherness</h1>
+    <p style="text-align:center;">Its all about MRINDRA.</p>
+
+    <h2>Before Everything</h2>
+    <p>
+        Four years ago, I didn’t know this version of life existed.
+        I didn’t know someone could feel like home even from miles away.
+    </p>
+
+    <div class="year">
+        <h2>Year One</h2>
+        <p>
+            তখন কেবল তোমায় চেনা শুরু করেছি। প্রেমে হাবুডুবু খাওয়া আমি তখনো তোমার সাথে কথাই বলতে পারতাম না। তুমিই সবসময় কথা বলতে। আমি শুধু শুনতাম। এখনও অবশ্য তুমিই বেশি বলো! সারাজীবন বোধকরি শুনেই যাব।
+        </p>
+        <img src="images/year1.jpg" alt="Year One Memory">
+    </div>
+
+    <div class="year">
+        <h2>Year Two</h2>
+        <p>
+            আমাদের মধ্যকার দূরত্ব তৈরি হয়ে গেছে এতোদিনে। তুমি ফরিদপুরে আর আমি খুলনায় এসে পড়েছি। দুইজনেই দুইরকম সমস্যা মোকাবিলা করছি। দুইজনেই দুইজনকে সবকিছু শেয়ার করছি, নিজেদের সাহস যোগাচ্ছি। এভাবেই সবসময় আমরা নিজেদের মোটিভেট করতে থাকব। 
+        </p>
+        <img src="images/year2.jpg" alt="Year Two Memory">
+    </div>
+
+    <div class="year">
+        <h2>Year Three</h2>
+        <p>
+            আমরা অভ্যস্ত হয়ে গেছি। আমি ফরিদপুর আসি তোমার সাথে দেখা করতে। নুরা ক্যাফে আমাদের জীবনের অন্যতম স্মৃতি হয়ে থাকবে। তোমার এত কাছে আসতে পেরেছি। তোমাকে একটু স্বস্তিতে জড়িয়ে ধরতে পারি, একটু আদর করতে পারি। তোমাকে ধরে বসে থাকা, আমার জীবনের সেরা অভিজ্ঞতা। এভাবে আমি সারাজীবন কাটিয়ে দিতে পারব।
+        </p>
+        <img src="images/year3.jpg" alt="Year Three Memory">
+    </div>
+
+    <div class="year">
+        <h2>Year Four</h2>
+        <p>
+            এখন আমার মা বাবাও জানে তোমার অস্তিত্ব। তোমার মনের সকল দ্বিধা দূর করতে যতকিছু করা প্রয়োজন সবই করছি আস্তে আস্তে। আমার হাত ধরে থেকো, ভবিষ্যতে যেন এভাবেই তোমাকে আগলে রাখতে পারি। আমাকে বিশ্বাস করো প্রিয়তমা! আমি শুধু তোমারই থাকব। 
+        </p>
+        <img src="images/year4.jpg" alt="Year Four Memory">
+    </div>
+
+    <div class="quote">
+        “Will you hold my hands and see this beautiful world with me?”  
+        <br><br>
+        <span class="heart">♥</span>
+    </div>
+
+    <div class="footer">
+        Happy 4th Anniversary  
+        <br>
+        — Yours Indra
+    </div>
+
+</div>
+
+</body>
+</html>
